@@ -1,7 +1,20 @@
-<div class="container">
+<div class="banner_min" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dqwouraji/image/upload/v1685722734/retro-film-production-canva-photo.xc6cf828a_l5e4wb.png);">
+  <div class="container">
+    <h1>Add your <strong>list</strong>!</h1>
+  </div>
+</div>
+
+
+
+
+<div class="container shadow p-3 m-5">
+<h2 class="font-monospace my-2">Create a new list</h2>
+ <br>
   <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
+  <br>
   <%= f.input :photo, as: :file %>
-  <%= f.submit "Create List", class: "btn btn-primary" %>
+  <br>
+  <%= f.submit "Create List", class: "btn btn-flat" %>
   <% end %>
 </div>

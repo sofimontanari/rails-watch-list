@@ -18,3 +18,17 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.banner_min {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+.banner_min h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
