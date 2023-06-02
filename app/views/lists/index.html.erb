@@ -1,6 +1,25 @@
-<h1>My Lists</h1>
-<% @lists.each do |list|  %>
-<%= link_to list.name , list_path(list), class: "text-decoration-none"%>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.vecteezy.com/system/resources/previews/003/158/117/non_2x/cinema-promo-banner-template-vector.jpg);">
+  <div class="container">
+    <h1> Save any kind of <strong>movies</strong>!</h1>
+    <p>Start now, create your Lists</p>
+    <%= link_to "Create a movie List" , new_list_path, class: "btn btn-flat"%>
+  </div>
+</div>
 
-<%= link_to "Create a movie List" , new_list_path, class: "btn btn-primary"%>
+
+
+ <div class="m-5 d-flex justify-content-between">
+  <h3 class="m-5 font-monospace flex-grow-1">My Lists</h3>
+  <%= link_to "Create a movie List" , new_list_path, class: "btn btn-flat mt-5", style: "height:45px"%>
+</div>
+
+ </div>
+<div class="container m-5">
+  <div class="row justify-content-evenly">
+    <% @lists.each do |list|  %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to list.name , list_path(list), class: "text-decoration-none link-light"%>
+        </div>
+    <% end %>
+  </div>
+</div>
