@@ -10,7 +10,6 @@
 </div>
 
 <div class=" container d-flex justify-content-evenly">
-
     <% @list.movies.each do |movie| %>
       <div class="card shadow rounded m-3" style="width: 18rem;">
         <%= image_tag movie.poster_url, class:"card-img-top"%>
@@ -25,10 +24,3 @@
       </div>
      <% end %>
 </div>
-
-
-
-
-
-
-<%= link_to "Back to Lists", lists_path %>
