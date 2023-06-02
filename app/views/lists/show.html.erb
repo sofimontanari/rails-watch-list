@@ -12,9 +12,10 @@
 
     <% @list.movies.each do |movie| %>
       <div class="card shadow rounded m-3" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <%= image_tag movie.poster_url, class:"card-img-top"%>
         <div class="card-body">
           <h5 class="card-title"><%= movie.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= movie.rating %><i class="fa-solid fa-star"></i></h6>
           <p class="card-text"><%= movie.overview %></p>
           <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
           <p class="card-text"><%= bookmark.comment %></p>
