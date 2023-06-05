@@ -12,7 +12,7 @@
 <div class=" container d-flex justify-content-evenly">
     <% @list.movies.each do |movie| %>
       <div class="card shadow rounded m-3" style="width: 18rem;">
-        <%= image_tag movie.poster_url, class:"card-img-top", height:150, crop: :fill%>
+        <%= image_tag movie.poster_url, class:"card-img-top", height:200, crop: :fit%>
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-center">
             <h5 class="card-title fw-bold font-monospace"><%= movie.title %></h5>
